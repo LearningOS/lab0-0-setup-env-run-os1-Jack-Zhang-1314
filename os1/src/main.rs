@@ -31,19 +31,19 @@ pub fn rust_main() -> ! {
         fn edata();
         fn sbss();
         fn ebss();
-        fn boot_stack();
+        fn boot_stack_lower();
         fn boot_stack_top();
     }
     clear_bss();
     logging::init();
     println!("Hello, world!");
     trace!(".text [{:#x}, {:#x})", stext as usize, etext as usize);
-    
+
     debug!(".rodata [{:#x}, {:#x})", srodata as usize, erodata as usize);
     info!(".data [{:#x}, {:#x})", sdata as usize, edata as usize);
     warn!(
-        "boot_stack [{:#x}, {:#x})",
-        boot_stack as usize, boot_stack_top as usize
+        "boot_stack_lower [{:#x}, {:#x})",
+        boot_stack_lower as usize, boot_stack_top as usize
     );
     error!(".bss [{:#x}, {:#x})", sbss as usize, ebss as usize);
     panic!("Shutdown machine!");
