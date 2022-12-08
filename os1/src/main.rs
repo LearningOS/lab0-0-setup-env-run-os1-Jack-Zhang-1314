@@ -2,7 +2,13 @@
 #![no_main]
 #![feature(panic_info_message)]
 
+// 使用 use 只能在当前作用域可见，一般用于 mod 之间相互引用
 use log::*;
+
+// 使用 extern crate 可以在整个 crate 中可用，它导入的范围是整个包
+// 对于 bin 文件使用当前目录的 lib 库，我们应该使用库名，像这样导入，也可以使用 use + 库名
+// #[macro_use]
+// extern crate log;
 
 #[macro_use]
 mod console;
