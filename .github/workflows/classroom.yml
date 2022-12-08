@@ -18,11 +18,11 @@ jobs:
           crate: cargo-binutils
           version: latest
           use-tool-cache: true
-      - name: Cache QEMU
-        uses: actions/cache@v3
-        with:
-          path: qemu-7.0.0
-          key: qemu-7.0.0-x86_64-riscv64
+#       - name: Cache QEMU
+#         uses: actions/cache@v3
+#         with:
+#           path: qemu-7.0.0
+#           key: qemu-7.0.0-x86_64-riscv64
       - name: Install QEMU
         run: |
           sudo apt-get update
