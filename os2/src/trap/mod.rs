@@ -48,3 +48,9 @@ pub fn trap_handler(cx: &mut TrapContext) -> &mut TrapContext {
 }
 
 pub use context::TrapContext;
+/*
+1. 首先通过 __alltraps 将 trap 上下文保存在内核栈上，
+2. 再跳转到使用 rust 编写的 trap_handler 函数完成 Trap 处理
+3. 当 trap_handler 函数完成后，使用 __restore 从保存在内核栈上的 Trap 上下文恢复寄存器
+4. 最后通过 sret 指令回到应用程序
+*/ 
