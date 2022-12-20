@@ -42,7 +42,7 @@ lazy_static! {
 
 pub struct TaskManager {
     num_app: usize,
-    inner: UPSafeCell<TaskManagerInner>,·
+    inner: UPSafeCell<TaskManagerInner>,
 }
 
 struct TaskManagerInner {
