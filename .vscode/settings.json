@@ -1,0 +1,28 @@
+{
+  // Prevent "can't find crate for `test`" error on no_std
+  // Ref: https://github.com/rust-lang/vscode-rust/issues/729
+  // For Rust Analyzer plugin users:
+  "rust-analyzer.cargo.target": "riscv64gc-unknown-none-elf",
+  "rust-analyzer.checkOnSave.allTargets": false,
+  // "rust-analyzer.cargo.features": [
+  //   "board_qemu"
+  // ],
+  "terminal.integrated.fontFamily": "monospace",
+  "rust-analyzer.linkedProjects": [
+    "guide-code/ch1-3mini-rt-usrland/Cargo.toml",
+    // "os1-ref/Cargo.toml",
+    "os1/Cargo.toml",
+    // "os2/Cargo.toml",
+    "user/Cargo.toml",
+    // "os2-ref/Cargo.toml",
+    "os3/Cargo.toml"
+    // "os4-ref/Cargo.toml",
+    // "os5-ref/Cargo.toml",
+    // "os6-ref/Cargo.toml",
+    // "os7-ref/Cargo.toml",
+    // "os8-ref/Cargo.toml",
+    // "easy-fs/Cargo.toml",
+    // "easy-fs-fuse/Cargo.toml",
+    // "user/Cargo.toml"
+  ]
+}
